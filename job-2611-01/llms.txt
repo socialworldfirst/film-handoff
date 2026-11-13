@@ -1,0 +1,9 @@
+# WorldFirst film hand-off job-2611-01
+
+One encrypted bundle with everything needed to start this film edit: the job brief, the film pick pack with its Resolve kit, and the product super pack. The password comes from the WorldFirst social team; it is not published here.
+
+Open it with one command (replace PASSWORD). On Windows run it in Git Bash, not PowerShell, which alters the bytes in a pipe:
+
+    curl -fsSL https://worldfirstinternal.org/film-handoff/job-2611-01/job.enc | openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -md sha256 -pass pass:PASSWORD | tar xz
+
+That creates a folder named film-job. Read film-job/BRIEF.md first.
